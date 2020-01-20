@@ -8,13 +8,13 @@ class MockedClockApi extends ClockApi {
   Stream<String> getLocationStream() => Stream.value("Poznań, Greater Poland");
 
   @override
-  Stream<DateTime> getMoonsetStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day, 23, 50));
+  Stream<DateTime> getMoonsetStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day + 1, 2, 50));
 
   @override
-  Stream<DateTime> getSunriseStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day, 20, 21));
+  Stream<DateTime> getSunriseStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day, 4, 21));
 
   @override
-  Stream<DateTime> getSunsetStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day, 23, 00));
+  Stream<DateTime> getSunsetStream() => Stream.value(DateTime(_dateNow.year, _dateNow.month, _dateNow.day, 16, 00));
 
   @override
   Stream<num> getTemperatureStream() => Stream.value(27.04);
