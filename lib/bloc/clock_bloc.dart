@@ -61,11 +61,11 @@ class ClockBloc {
                 Tuple2(moonset.difference(sunset), DateTime.now().difference(sunset))));
 
     currentDayStream = currentTimeStream.distinct((curr, next) => curr.day == next.day);
-    currentTimeEachMinuteStream = currentTimeStream.distinct((curr, next) => curr.second == next.second);
+    currentTimeEachMinuteStream = currentTimeStream.distinct((curr, next) => curr.minute == next.minute);
     currentTimeEach10MinutesStream =
-        currentTimeStream.distinct((curr, next) => (curr.second ~/ 10) == (next.second ~/ 10));
-    currentTimeEachHourStream = currentTimeStream.distinct((curr, next) => curr.minute == next.minute);
-    currentTimeEach10HoursStream =
         currentTimeStream.distinct((curr, next) => (curr.minute ~/ 10) == (next.minute ~/ 10));
+    currentTimeEachHourStream = currentTimeStream.distinct((curr, next) => curr.hour == next.hour);
+    currentTimeEach10HoursStream =
+        currentTimeStream.distinct((curr, next) => (curr.hour ~/ 10) == (next.hour ~/ 10));
   }
 }
