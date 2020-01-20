@@ -32,7 +32,7 @@ class _AppUniteClockState extends State<AppUniteClock> with SingleTickerProvider
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _subscription = Provider.of<ClockBloc>(context).dayOrNightLengthBasedOnCurrentTimeWithCurrentProgressMade.listen((lengthAndDifference) {
+    _subscription = Provider.of<ClockBloc>(context).ellipseAnimationDurationsStream.listen((lengthAndDifference) {
       print(lengthAndDifference.first);
       print(lengthAndDifference.second);
       _ellipseAnimation.duration = lengthAndDifference.first;

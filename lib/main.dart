@@ -1,3 +1,4 @@
+import 'package:appunite_clock/api/mock_clock_api.dart';
 import 'package:appunite_clock/bloc/clock_bloc.dart';
 import 'package:appunite_clock/common/colors.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ import 'clock.dart';
 void main() => runApp(AppUniteClockApp());
 
 class AppUniteClockApp extends StatelessWidget {
-  final ClockBloc bloc = ClockBloc();
+  final ClockBloc bloc = ClockBloc(MockedClockApi());
 
   @override
   Widget build(BuildContext context) {

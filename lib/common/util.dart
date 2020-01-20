@@ -6,6 +6,24 @@ import 'package:appunite_clock/model/weather_helpers.dart';
 import 'package:appunite_clock/widgets/star.dart';
 import 'package:flutter/material.dart';
 
+class TemperatureUtil {
+  /// Temperature with unit of measurement.
+  static String temperatureString(num temperature, TemperatureUnit unit) {
+    return '${temperature.toStringAsFixed(1)}${_unitString(unit)}';
+  }
+
+  /// Temperature unit of measurement with degrees.
+  static String _unitString(TemperatureUnit unit) {
+    switch (unit) {
+      case TemperatureUnit.fahrenheit:
+        return '°F';
+      case TemperatureUnit.celsius:
+      default:
+        return '°C';
+    }
+  }
+}
+
 class EllipsePositionUtils {
   /// Between -1.5,0 -> 1.5,0 and -1.5,0 -> 0, -1.5
   ///
