@@ -36,13 +36,16 @@ class ClockBloc {
     /// Please make sure not to set sunrise before sunset and moonset before sunset since it might cause to some
     /// unexpected behavior of the sun movement or even potential crashes.
     final dateNow = DateTime.now();
-    final DateTime sunrise = DateTime(dateNow.year, dateNow.month, dateNow.day, 14, 21);
-    final DateTime sunset = DateTime(dateNow.year, dateNow.month, dateNow.day, 20, 00);
-    final DateTime moonset = DateTime(dateNow.year, dateNow.month, dateNow.day, 21, 00);
+    final DateTime sunrise = DateTime(dateNow.year, dateNow.month, dateNow.day, 20, 21);
+    final DateTime sunset = DateTime(dateNow.year, dateNow.month, dateNow.day, 23, 00);
+    final DateTime moonset = DateTime(dateNow.year, dateNow.month, dateNow.day, 23, 50);
 
     Stream<DateTime> currentTimeStream = Stream.periodic(Duration(seconds: 1), (_) => DateTime.now()).share();
 
-    isDayTime = currentTimeStream.map((DateTime time) => time.isBefore(sunset)).distinctUnique().share();
+    isDayTime = currentTimeStream
+        .map((DateTime time) => time.isAfter(sunrise) && time.isBefore(sunset))
+        .distinctUnique()
+        .share();
 
     dayOrNightLengthBasedOnCurrentTimeWithCurrentProgressMade = isDayTime.map((isDay) => isDay
         ? Tuple2(sunset.difference(sunrise), DateTime.now().difference(sunrise))
