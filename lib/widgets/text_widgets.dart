@@ -123,7 +123,6 @@ class _AnimatedTextState extends State<AnimatedText> with SingleTickerProviderSt
                   style: TextStyle(
                     color: MainColors.lightOrDark(context, MainColors.lightTimeText, MainColors.darkTimeText),
                     fontSize: 128,
-                    fontFamily: "RobotoMono",
                   ),
                 ),
               ),
@@ -137,7 +136,6 @@ class _AnimatedTextState extends State<AnimatedText> with SingleTickerProviderSt
                   style: TextStyle(
                     color: MainColors.lightOrDark(context, MainColors.lightTimeText, MainColors.darkTimeText),
                     fontSize: 128,
-                    fontFamily: "RobotoMono",
                   ),
                 ),
               ),

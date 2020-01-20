@@ -27,7 +27,7 @@ class AppUniteClockApp extends StatelessWidget {
               brightness: snapshot.data ? Brightness.light : Brightness.dark,
               fontFamily: "Roboto",
             ),
-            home: Provider.value(child: const ScaffoldOfClock(), value: bloc),
+            home: Provider.value(child: const ScaffoldOfClockWith5to3AspectRatio(), value: bloc),
           );
         });
   }

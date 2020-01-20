@@ -116,9 +116,7 @@ class _TimeWrapperState extends State<TimeWrapper> {
               ":",
               style: TextStyle(
                 fontSize: 128,
-                color: MainColors.lightOrDark(context, MainColors.colon, MainColors.darkTimeText),
-// TODO: Not sure about using monospace font
-//                fontFamily: "RobotoMono",
+                color: MainColors.lightOrDark(context, MainColors.colon, MainColors.darkTimeText.withOpacity(0.6)),
               ),
             ),
             StreamBuilder(
