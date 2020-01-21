@@ -1,8 +1,8 @@
 # appunite_clock
 
-A clock for flutter contest ![screenshot](/Users/michal/AndroidStudioProjects/appunite_clock/others/screenshot.png)
+A clock for flutter contest ![screenshot](others/screenshot.png)
 
-<video src="/Users/michal/AndroidStudioProjects/appunite_clock/others/video.mov"></video>
+<video src="others/video.mov"></video>
 
 # Recommendations
 
