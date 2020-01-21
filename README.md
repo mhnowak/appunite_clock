@@ -2,6 +2,8 @@
 
 A clock for flutter contest
 
+![Screenshot 2020-01-20 at 22.51.51](/Users/michal/Desktop/Screenshot 2020-01-20 at 22.51.51.png)<video src="/Users/michal/Desktop/Screen Recording 2020-01-20 at 22.53.31.mov"></video>
+
 # Recommendations
 
 - You can simulate 5:3 aspect ratio while using `ScaffoldOfClockWith5to3AspectRatio` Widget 
