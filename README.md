@@ -1,8 +1,8 @@
 # appunite_clock
 
-A clock for flutter contest
+A clock for flutter contest ![screenshot](/Users/michal/AndroidStudioProjects/appunite_clock/others/screenshot.png)
 
-![Screenshot 2020-01-20 at 22.51.51](/Users/michal/Desktop/Screenshot 2020-01-20 at 22.51.51.png)<video src="/Users/michal/Desktop/Screen Recording 2020-01-20 at 22.53.31.mov"></video>
+<video src="/Users/michal/AndroidStudioProjects/appunite_clock/others/video.mov"></video>
 
 # Recommendations
 
